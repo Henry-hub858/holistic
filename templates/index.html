@@ -1,0 +1,684 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Holistic Impact Initiative</title>
+        <!-- Structured Data -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Holistic Health Initiative",
+          "url": "https://www.example.com/",
+          "logo": "{{ url_for('static', filename='assets/img/logo/logo.png') }}",
+          "description": "Empowering communities in Africa through health, education, and environmental initiatives.",
+          "sameAs": [
+            "https://www.facebook.com/HolisticHealth",
+            "https://www.twitter.com/HolisticHealth",
+            "https://www.instagram.com/HolisticHealth"
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+          ]
+        }
+        </script>
+    
+        <!-- CSS Files -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/owl.carousel.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/slicknav.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/flaticon.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/progressbar_barfiller.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/gijgo.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/animate.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/animated-headline.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/magnific-popup.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/fontawesome-all.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/themify-icons.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/slick.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/nice-select.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/style.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/chatbot.css') }}">
+    </head>
+    
+<body>
+    <!-- ? Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <img src="/static/assets/img/logo/loder.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Preloader Start -->
+    <header>
+        <!-- Header Start -->
+        <div class="header-area">
+            <div class="main-header ">
+                <div class="header-top d-none d-lg-block">
+                    <div class="container-fluid">
+                        <div class="col-xl-12">
+                            <div class="row d-flex justify-content-between align-items-center">
+                                <div class="header-info-left d-flex">
+                                    <ul>     
+                                        <li>Phone: +254723896489/+254716377695
+                                        </li>
+                                        <li>Email: info@holisticimpactinitiative.africa</li>
+                                    </ul>
+                                    <div class="header-social">    
+                                        <ul>
+                                            <li>
+                                                <a href="https://x.com" target="_blank">
+                                                    <img src="static/assets/img/x-logo.png" alt="X logo" style="width: 20px; height: 20px;">
+                                                </a>
+                                            </li>
+                                            <li><a href="https://www.facebook.com/sai4ull"><i class="fab fa-facebook-f"></i></a></li>
+                                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                            <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                                        </ul>
+                                        
+                                                                            </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-bottom  header-sticky">
+                    <div class="container-fluid">
+                        <div class="row align-items-center">
+                            <!-- Logo -->
+                            <div class="col-xl-2 col-lg-2">
+                                <div class="logo">
+                                    <a href="index.html"><img src="/static/assets/img/logo/logo.png" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-xl-10 col-lg-10">
+                                <div class="menu-wrapper  d-flex align-items-center justify-content-end">
+                                    <!-- Main-menu -->
+                                    <div class="main-menu d-none d-lg-block">
+                                        <nav>
+                                            <ul id="navigation">                                                                                          
+                                                <li><a href="{{ url_for('home') }}">Home</a></li>
+                                                <li><a href="{{ url_for('about') }}">About</a></li>
+                                                <li><a href="{{ url_for('program') }}">Current Initiatives</a></li>
+                                                <li><a href="{{ url_for('events') }}">Social Events</a></li>
+                                                <li><a href="{{ url_for('blog') }}">Blog</a>
+                                                    
+                                                </li>
+                                                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                                                
+                                            </ul>
+                                        </nav>
+                                        
+                                        
+                                    </div>
+                                    <!-- Header-btn -->
+                                    <div class="header-right-btn d-none d-lg-block ml-20">
+                                        <a href="{{ url_for('donate') }}" class="btn header-btn">Donate</a>
+
+                                    </div>
+                                </div>
+                            </div> 
+                            <!-- Mobile Menu -->
+                            <div class="col-12">
+                                <div class="mobile_menu d-block d-lg-none"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+    </header>
+    <!-- header end -->
+    <main>
+    <!-- slider Area Start-->
+    <div class="slider-area">
+        <div class="slider-active">
+            <!-- Single Slider -->
+            <div class="single-slider slider-height d-flex align-items-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-8 col-sm-10">
+                            <div class="hero__caption">
+                                <h1 data-animation="fadeInUp" data-delay=".6s">Our Helping to<br> the world.</h1>
+                                <P data-animation="fadeInUp" data-delay=".8s" >Empowering vulnerable communities by ensuring equitable access to quality health services, education and nutrition while promoting environmental stewardship and building  resilience to climate change through sustainable development projects.</P>
+                                <!-- Hero-btn -->
+                                <div class="hero__btn">
+                                    <a href="industries.html" class="btn hero-btn mb-10"  data-animation="fadeInLeft" data-delay=".8s">Donate</a>
+                                    <a href="industries.html" class="cal-btn ml-15" data-animation="fadeInRight" data-delay="1.0s">
+                                        <i class="flaticon-null"></i>
+                                        <p>+254723896489/+254716377695</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Single Slider -->
+            <div class="single-slider slider-height d-flex align-items-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-8 col-sm-10">
+                            <div class="hero__caption">
+                                <h1 data-animation="fadeInUp" data-delay=".6s">Our Helping to<br> the world.</h1>
+                                <P data-animation="fadeInUp" data-delay=".8s" >Empowering vulnerable communities by ensuring equitable access to quality health services, education and nutrition while promoting environmental stewardship and building  resilience to climate change through sustainable development projects.
+                                </P>
+                                <!-- Hero-btn -->
+                                <div class="hero__btn">
+                                    <a href="industries.html" class="btn hero-btn mb-10"  data-animation="fadeInLeft" data-delay=".8s">Donate</a>
+                                    <a href="industries.html" class="cal-btn ml-15" data-animation="fadeInRight" data-delay="1.0s">
+                                        <i class="flaticon-null"></i>
+                                        <p>+254723896489/+254716377695</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- slider Area End-->
+    <!--? Services Area Start -->
+    <div class="service-area section-padding30">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-6 col-lg-7 col-md-10 col-sm-10">
+                    <!-- Section Tittle -->
+                    <div class="section-tittle text-center mb-80">
+                        <span>What we are doing</span>
+                        <h2>We Are In A Mission To Help The Helpless</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="single-cat text-center mb-50">
+                        <div class="cat-icon">
+                            <span class="flaticon-null-1"></span>
+                        </div>
+                        <div class="cat-cap">
+                            <h5><a href="services.html">Health</a></h5>
+                            <p>At Holistic Impact Initiative, we work tirelessly to improve healthcare accessibility across Africa. Our programs focus on providing essential medical services, promoting preventative care, and empowering communities to take control of their health through education and outreach."</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="single-cat active text-center mb-50">
+                        <div class="cat-icon">
+                            <span class="flaticon-think"></span>
+                        </div>
+                        <div class="cat-cap">
+                            <h5><a href="services.html">Environment</a></h5>
+                            <p>Environmental sustainability is at the core of our mission. We implement eco-friendly practices, promote conservation efforts, and engage local communities to protect Africa's rich natural resources for future generations.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="single-cat text-center mb-50">
+                        <div class="cat-icon">
+                            <span class="flaticon-gear"></span>
+                        </div>
+                        <div class="cat-cap">
+                            <h5><a href="services.html">Education</h5>
+                            <p>Education is the key to breaking the cycle of poverty. We are committed to enhancing educational opportunities for children and adults across Africa, providing resources, training, and support to empower individuals and transform communities.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Services Area End -->
+    <!--? About Law Start-->
+    <section class="about-low-area section-padding2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-10">
+                    <div class="about-caption mb-50">
+                        <!-- Section Tittle -->
+                        <div class="section-tittle mb-35">
+                            <span>About our organization</span>
+                            <h2>We Are On A Mission To  Help Helpless</h2>
+                        </div>
+                        
+                        <p>At Holistic Health Initiative, we believe in the power of collective action to bring lasting change. Our mission is to improve the lives of those in need by addressing the interconnected challenges of health, education, and the environment in Africa.
+
+                            We provide access to essential healthcare, promote sustainable environmental practices, and create educational opportunities for those who need them most. Through our programs, we aim to empower communities, inspire hope, and create a brighter future for generations to come.
+                            
+                            We are dedicated to making a tangible impact, working with local partners and communities to ensure our initiatives are effective and sustainable. Every effort we make is driven by our belief in holistic solutions for a better tomorrow.</p>
+                    </div>
+                    <a href="about.html" class="btn">About US</a>
+                    <p> The Holistic Health Initiative is dedicated to promoting health, education, and environmental sustainability in Africa. Our mission is to empower communities through innovative programs and initiatives that address the most pressing challenges faced by individuals and families.
+
+                        Our Vision:
+                        To create a healthier, educated, and sustainable future for Africa.
+                        
+                        Our Mission:
+                        We aim to provide comprehensive solutions that integrate health, education, and environmental strategies to improve the quality of life for communities across Africa.
+                        
+                        Our Values:
+                        - Integrity
+                        - Collaboration
+                        - Innovation
+                        - Sustainability
+                        - Empowerment</p>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <!-- about-img -->
+                    <div class="about-img ">
+                        <div class="about-font-img d-none d-lg-block">
+                            <img src="/static/assets/img/gallery/about2.png" alt="">
+                        </div>
+                        <div class="about-back-img">
+                            <img src="/static/assets/img/gallery/about1.jpg" alt="" style="width: 500px; height: auto;">
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Law End-->
+    <!-- Our Cases Start -->
+    <div class="our-cases-area section-padding30">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-6 col-lg-7 col-md-10 col-sm-10">
+                    <!-- Section Tittle -->
+                    <div class="section-tittle text-center mb-80">
+                        <span>Our Causes you can see</span>
+                        <h2>Explore our latest causes that we champion </h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="single-cases mb-40">
+                        <div class="cases-img">
+                            <img src="/static/assets/img/gallery/case1.png" alt="">
+                        </div>
+                        <div class="cases-caption">
+                            <h3><a href="#">Ensure Education For Every Poor Children</a></h3>
+                            <!-- Progress Bar -->
+                            <div class="single-skill mb-15">
+                                <div class="bar-progress">
+                                    <div id="bar1" class="barfiller">
+                                        <div class="tipWrap">
+                                            <span class="tip"></span>
+                                        </div>
+                                        <span class="fill" data-percentage="70"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- / progress -->
+                            <div class="prices d-flex justify-content-between">
+                                <p>Raised:<span> $</span></p>
+                                <p>Goal:<span> $</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="single-cases mb-40">
+                        <div class="cases-img">
+                            <img src="/static/assets/img/gallery/case2.png" alt="">
+                        </div>
+                        <div class="cases-caption">
+                            <h3><a href="#">Providing Healthy Food For The Children</a></h3>
+                            <!-- Progress Bar -->
+                            <div class="single-skill mb-15">
+                                <div class="bar-progress">
+                                    <div id="bar2" class="barfiller">
+                                        <div class="tipWrap">
+                                            <span class="tip"></span>
+                                        </div>
+                                        <span class="fill" data-percentage="25"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- / progress -->
+                            <div class="prices d-flex justify-content-between">
+                                <p>Raised:<span> $</span></p>
+                                <p>Goal:<span> $</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="single-cases mb-40">
+                        <div class="cases-img">
+                            <img src="/static/assets/img/gallery/case3.png" alt="">
+                        </div>
+                        <div class="cases-caption">
+                            <h3><a href="#">Supply Drinking Water For  The People</a></h3>
+                            <!-- Progress Bar -->
+                            <div class="single-skill mb-15">
+                                <div class="bar-progress">
+                                    <div id="bar3" class="barfiller">
+                                        <div class="tipWrap">
+                                            <span class="tip"></span>
+                                        </div>
+                                        <span class="fill" data-percentage="50"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- / progress -->
+                            <div class="prices d-flex justify-content-between">
+                                <p>Raised:<span> $</span></p>
+                                <p>Goal:<span> $</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Our Cases End -->
+   
+   
+<!-- Team Ara End -->
+
+   <!-- Want To work -->
+<section class="wantToWork-area ">
+    <div class="container">
+        <div class="wants-wrapper w-padding2 section-bg" data-background="/static/assets/img/gallery/section_bg01.png">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-xl-5 col-lg-9 col-md-8">
+                    <div class="wantToWork-caption wantToWork-caption2">
+                        <h2>Lets Change The World With Humanity</h2>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-3 col-md-4">
+                    <a href="{{ url_for('volunteer') }}" class="btn white-btn f-right sm-left">Become A Volunteer</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Want To work End -->
+
+   
+    <!--? Our Partners Start -->
+    <section class="home-blog-area section-padding30">
+        <div class="container">
+            <!-- Section Tittle -->
+            <div class="row justify-content-center">
+                <div class="col-xl-5 col-lg-6 col-md-9 col-sm-10"><h1>Our partners</h1/span>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 col-md-6">
+                    <div class="home-blog-single mb-30">
+                        <div class="blog-img-cap">
+                            <div class="blog-img">
+                                <img src="/static/assets/img/gallery/home-blog1.png" alt="">
+                                <!-- Blog date -->
+                                <div class="blog-date text-center">
+                                    <span>24</span>
+                                    <p>Now</p>
+                                </div>
+                            </div>
+                            
+    <!--? Count Down Start -->
+    <div class="count-down-area pt-25 section-bg" data-background="/static/assets/img/gallery/section_bg02.png">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-12 col-md-12">
+                    <div class="count-down-wrapper" >
+                        <div class="row justify-content-between">
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                                <!-- Counter Up -->
+                                <div class="single-counter text-center">
+                                    <span class="counter color-green">6,200</span>
+                                    <span class="plus">+</span>
+                                    <p class="color-green">Donation</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                                <!-- Counter Up -->
+                                <div class="single-counter text-center">
+                                    <span class="counter color-green">80</span>
+                                    <span class="plus">+</span>
+                                    <p class="color-green">Fund Raised</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                                <!-- Counter Up -->
+                                <div class="single-counter text-center">
+                                    <span class="counter color-green">256</span>
+                                    <span class="plus">+</span>
+                                    <p class="color-green">Donation</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                                <!-- Counter Up -->
+                                <div class="single-counter text-center">
+                                    <span class="counter color-green">256</span>
+                                    <span class="plus">+</span>
+                                    <p class="color-green">Donation</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Count Down End -->
+    </main>
+    <footer>
+        <div class="footer-wrapper section-bg2" data-background="/static/assets/img/gallery/footer_bg.png">
+            <!-- Footer Top -->
+            <div class="footer-area footer-padding">
+                <div class="container">
+                    <div class="row d-flex justify-content-between">
+                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                            <div class="single-footer-caption mb-50">
+                                <div class="single-footer-caption mb-30">
+                                    <div class="footer-tittle">
+                                        <div class="footer-logo mb-20">
+                                            <a href="index.html"><img src="/static/assets/img/logo/logo2_footer.png" alt=""></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
+                            <div class="single-footer-caption mb-50">
+                                <div class="footer-tittle">
+                                    <h4>Contact Info</h4>
+                                    <ul>
+                                        <li>
+                                            <p>Address: P.O. Box 6344-40100.</p>
+                                        </li>
+                                        <li><p>Kisumu, Kenya</p>
+                                        </li>
+                                        <li><a href="#">Phone: +254723896489/+254716377695
+
+                                        </a></li>
+                                        <li><a href="#">Email: info@holisticimpactinitiative.africa</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
+                            <div class="single-footer-caption mb-50">
+                                <div class="footer-tittle">
+                                    <h4>Newsletter</h4>
+                                    <div class="footer-pera footer-pera2">
+                                        <p>Subscribe To Our Newsletter.</p>
+                                    </div>
+                                    <!-- Form -->
+                                    <div class="footer-form">
+                                        <div id="mc_embed_signup">
+                                            <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+                                                method="get" class="subscribe_form relative mail_part">
+                                                <input type="email" name="email" id="newsletter-form-email" placeholder="Email Address"
+                                                    class="placeholder hide-on-focus" onfocus="this.placeholder = ''"
+                                                    onblur="this.placeholder = 'Email Address'">
+                                                <div class="form-icon">
+                                                    <button type="submit" name="submit" id="newsletter-submit"
+                                                        class="email_icon newsletter-submit button-contactForm">
+                                                        <img src="/static/assets/img/gallery/form.png" alt="">
+                                                    </button>
+                                                </div>
+                                                <div class="mt-10 info"></div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Bottom -->
+            <div class="footer-bottom-area">
+                <div class="container">
+                    <div class="footer-border">
+                        <div class="row d-flex justify-content-between align-items-center">
+                            <div class="col-xl-10 col-lg-9">
+                                <div class="footer-copy-right">
+                                    <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved.</p>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col-lg-3">
+                                <div class="footer-social f-right">
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="https://www.facebook.com/sai4ull"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fas fa-globe"></i></a>
+                                    <a href="#"><i class="fab fa-behance"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scroll Up -->
+    <div id="back-top">
+        <a title="Go to Top" href="#"><i class="fas fa-level-up-alt"></i></a>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="/static/assets/js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="/static/assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="/static/assets/js/popper.min.js"></script>
+    <script src="/static/assets/js/bootstrap.min.js"></script>
+    <script src="/static/assets/js/jquery.slicknav.min.js"></script>
+    <script src="/static/assets/js/owl.carousel.min.js"></script>
+    <script src="/static/assets/js/slick.min.js"></script>
+    <script src="/static/assets/js/wow.min.js"></script>
+    <script src="/static/assets/js/animated.headline.js"></script>
+    <script src="/static/assets/js/jquery.magnific-popup.js"></script>
+    <script src="/static/assets/js/gijgo.min.js"></script>
+    <script src="/static/assets/js/jquery.nice-select.min.js"></script>
+    <script src="/static/assets/js/jquery.sticky.js"></script>
+    <script src="/static/assets/js/jquery.barfiller.js"></script>
+    <script src="/static/assets/js/jquery.counterup.min.js"></script>
+    <script src="/static/assets/js/waypoints.min.js"></script>
+    <script src="/static/assets/js/jquery.countdown.min.js"></script>
+    <script src="/static/assets/js/hover-direction-snake.min.js"></script>
+    <script src="/static/assets/js/contact.js"></script>
+    <script src="/static/assets/js/jquery.form.js"></script>
+    <script src="/static/assets/js/jquery.validate.min.js"></script>
+    <script src="/static/assets/js/mail-script.js"></script>
+    <script src="/static/assets/js/jquery.ajaxchimp.min.js"></script>
+    <script src="/static/assets/js/plugins.js"></script>
+    <script src="/static/assets/js/main.js"></script>
+    
+    
+    
+    <!-- Chatbot -->
+<!-- Chatbot -->
+<div class="chatbot-container" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000; background-color: white; border: 1px solid #ddd; border-radius: 8px; width: 300px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+    <div class="chat-header" style="background-color: #007bff; color: white; padding: 10px; border-top-left-radius: 8px; border-top-right-radius: 8px;">
+        <h4 style="margin: 0; font-size: 16px;">Chat with Us!</h4>
+        <button class="close-chat" onclick="toggleChat()" style="background: none; border: none; color: white; font-size: 20px; float: right; cursor: pointer;">×</button>
+    </div>
+    <div class="chat-body" id="chat-body" style="max-height: 300px; overflow-y: auto; padding: 10px; display: none; transition: all 0.3s ease;">
+        <div id="chat-content" style="font-size: 14px; line-height: 1.5;"></div>
+    </div>
+    <div class="chat-input" id="chat-input" style="display: none; border-top: 1px solid #ddd; padding: 10px;">
+        <input type="text" id="user-input" placeholder="Type your message..." style="width: calc(100% - 50px); padding: 5px; border: 1px solid #ddd; border-radius: 4px;" onkeypress="sendMessage(event)">
+        <button onclick="sendChat()" style="background-color: #007bff; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;">Send</button>
+    </div>
+    <button class="chat-toggle" onclick="toggleChat()" style="position: absolute; bottom: -50px; right: 0; background-color: #007bff; color: white; border: none; border-radius: 50%; width: 50px; height: 50px; font-size: 20px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); cursor: pointer; transition: all 0.3s ease;">💬</button>
+</div>
+
+<script>
+    const chatbotResponses = {
+        hello: "Hi there! How can I assist you today?",
+        volunteer: "That's amazing! You can volunteer by filling out the form on our site.",
+        donation: "Thank you for your interest in donating! Visit our Donate page for more details.",
+        default: "I'm here to help! Please ask your question.",
+    };
+
+    // Function to toggle chat visibility
+    function toggleChat() {
+        const chatBody = document.getElementById('chat-body');
+        const chatInput = document.getElementById('chat-input');
+        const chatToggle = document.querySelector('.chat-toggle');
+
+        if (chatBody.style.display === 'none') {
+            chatBody.style.display = 'block';
+            chatInput.style.display = 'block';
+            chatToggle.style.bottom = '250px'; // Adjust to ensure button doesn't overlap
+        } else {
+            chatBody.style.display = 'none';
+            chatInput.style.display = 'none';
+            chatToggle.style.bottom = '0';
+        }
+    }
+
+    // Function to send user message to Flask backend and get AI response
+    function sendChat() {
+        const userInput = document.getElementById('user-input');
+        const chatContent = document.getElementById('chat-content');
+
+        if (userInput.value.trim() !== "") {
+            const userMessage = userInput.value;
+            chatContent.innerHTML += `<div><strong>You:</strong> ${userMessage}</div>`;
+
+            // Send message to Flask backend
+            fetch('/chat', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ message: userMessage }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                const botReply = data.response || "Sorry, I couldn't get a response.";
+                chatContent.innerHTML += `<div><strong>Bot:</strong> ${botReply}</div>`;
+                chatContent.scrollTop = chatContent.scrollHeight;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                chatContent.innerHTML += `<div><strong>Bot:</strong> Oops, something went wrong!</div>`;
+            });
+
+            userInput.value = "";
+        }
+    }
+
+    function sendMessage(event) {
+        if (event.key === "Enter") {
+            sendChat();
+        }
+    }
+</script>
+
+</body>
+</html>    

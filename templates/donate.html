@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Holistic Health Initiative I Donate</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/slicknav.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/flaticon.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/progressbar_barfiller.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/gijgo.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/animate.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/animated-headline.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/fontawesome-all.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/themify-icons.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/slick.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/nice-select.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/form-styles.css') }}">
+
+</head>
+<body>
+    <!-- Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <img src="/static/assets/img/logo/loder.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Preloader End -->
+
+    <header>
+        <!-- Header Start -->
+        <div class="header-area">
+            <div class="main-header">
+                <div class="header-top d-none d-lg-block">
+                    <div class="container-fluid">
+                        <div class="col-xl-12">
+                            <div class="row d-flex justify-content-between align-items-center">
+                                <div class="header-info-left d-flex">
+                                    <ul>     
+                                        <li>Phone: +254723896489/+254716377695
+                                        </li>
+                                        <li>Email: info@holisticimpactinitiative.africa</li>
+                                    </ul>
+                                    <div class="header-social">    
+                                        <ul>
+                                            <li>
+                                                <a href="https://x.com" target="_blank">
+                                                    <img src="static/assets/img/x-logo.png" alt="X logo" style="width: 20px; height: 20px;">
+                                                </a>
+                                            </li>
+                                            <li><a href="https://www.facebook.com/sai4ull"><i class="fab fa-facebook-f"></i></a></li>
+                                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                            <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                               
+                        </div>
+                    </div>
+                </div>
+                <div class="header-bottom header-sticky">
+                    <div class="container-fluid">
+                        <div class="row align-items-center">
+                            <div class="col-xl-2 col-lg-2">
+                                <div class="logo">
+                                    <a href="index.html"><img src="/static/assets/img/logo/logo.png" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="col-xl-10 col-lg-10">
+                                <div class="menu-wrapper d-flex align-items-center justify-content-end">
+                                    <div class="main-menu d-none d-lg-block">
+                                        <nav>
+                                            <ul id="navigation">
+                                                <li><a href="{{ url_for('home') }}">Home</a></li>
+                                                <li><a href="{{ url_for('about') }}">About</a></li>
+                                                <li><a href="{{ url_for('program') }}">Current Initiatives</a></li>
+                                                <li><a href="{{ url_for('events') }}">Social Events</a></li>
+                                                <li><a href="{{ url_for('blog') }}">Blog</a>
+                                                    
+                                                </li>
+                                                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                    <div class="header-right-btn d-none d-lg-block ml-20">
+                                        <a href="{{ url_for('donate') }}" class="btn header-btn">Donate</a>
+                                    </div>
+                                </div>
+                            </div> 
+                            <div class="col-12">
+                                <div class="mobile_menu d-block d-lg-none"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+    </header>
+
+    <!-- Donation Form Start -->
+<section class="donation-section">
+    <div class="container">
+        <h2>Support Our Cause</h2>
+        <p>We greatly appreciate your support. Choose your preferred method of donation:</p>
+        <form action="{{ url_for('donate') }}" method="POST" id="donation-form">
+            
+            <!-- Name field -->
+            <div class="form-group">
+                <label for="donor-name">Full Name:</label>
+                <input type="text" id="donor-name" name="name" class="form-control" required placeholder="Enter your full name">
+            </div>
+
+            <div class="form-group">
+                <label for="donation-amount">Donation Amount (in USD):</label>
+                <input type="number" id="donation-amount" name="donation-amount" class="form-control" required placeholder="Enter amount">
+            </div>
+
+            <div class="form-group">
+                <label for="donation-method">Choose Your Donation Method:</label>
+                <select id="donation-method" name="donation-method" class="form-control" required onchange="togglePaymentDetails()">
+                    <option value="mpesa">Mpesa</option>
+                    <option value="credit-card">Credit/Debit Card</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="bank-transfer">Bank Transfer</option>
+                </select>
+            </div>
+
+            <!-- Mpesa details section -->
+            <div id="mpesa-details" class="payment-details">
+                <h5>Mpesa Details</h5>
+                <p>Send your donation via Mpesa to the following number:</p>
+                <p><strong>+123456789</strong></p>
+            </div>
+
+            <!-- Credit card details section -->
+            <div id="credit-card-details" class="payment-details" style="display:none;">
+                <h5>Credit/Debit Card Payment</h5>
+                <label for="card-number">Card Number:</label>
+                <input type="text" id="card-number" name="card-number" class="form-control" placeholder="Enter your card number" required>
+                <label for="expiry-date">Expiry Date:</label>
+                <input type="text" id="expiry-date" name="expiry-date" class="form-control" placeholder="MM/YY" required>
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" class="form-control" placeholder="Enter CVV" required>
+            </div>
+
+            <!-- PayPal details section -->
+            <div id="paypal-details" class="payment-details" style="display:none;">
+                <h5>PayPal Payment</h5>
+                <p>Click below to proceed to PayPal:</p>
+                <button type="button" class="btn btn-primary" onclick="window.location.href='https://www.paypal.com'">Donate with PayPal</button>
+            </div>
+
+            <!-- Bank transfer details section -->
+            <div id="bank-transfer-details" class="payment-details" style="display:none;">
+                <h5>Bank Transfer</h5>
+                <p>Transfer to the following bank account:</p>
+                <p><strong>Bank Name: XYZ Bank</strong></p>
+                <p><strong>Account Number: 9876543210</strong></p>
+                <p><strong>Branch: Nairobi</strong></p>
+            </div>
+
+            <button type="submit" class="btn btn-success">Donate Now</button>
+        </form>
+
+        <!-- Confirmation Message -->
+        <div id="confirmation-message" style="display:none; margin-top: 20px;">
+            <h3>Thank you for your donation!</h3>
+            <p>Your donation helps us make a difference. We appreciate your support.</p>
+        </div>
+    </div>
+</section>
+<!-- Donation Form End -->
+
+
+<script>
+    // Function to toggle between payment method details
+    function togglePaymentDetails() {
+        var donationMethod = document.getElementById("donation-method").value;
+        
+        // Hide all payment details sections
+        document.getElementById("mpesa-details").style.display = "none";
+        document.getElementById("credit-card-details").style.display = "none";
+        document.getElementById("paypal-details").style.display = "none";
+        document.getElementById("bank-transfer-details").style.display = "none";
+        
+        // Show the selected payment details
+        if (donationMethod === "mpesa") {
+            document.getElementById("mpesa-details").style.display = "block";
+        } else if (donationMethod === "credit-card") {
+            document.getElementById("credit-card-details").style.display = "block";
+        } else if (donationMethod === "paypal") {
+            document.getElementById("paypal-details").style.display = "block";
+        } else if (donationMethod === "bank-transfer") {
+            document.getElementById("bank-transfer-details").style.display = "block";
+        }
+    }
+
+    // Show confirmation message after successful form submission (for demonstration purposes)
+    document.getElementById("donation-form").onsubmit = function(event) {
+        event.preventDefault(); // Prevent actual form submission
+        document.getElementById("confirmation-message").style.display = "block";
+        // You can add more logic here to handle backend submission of the form
+    };
+</script>
+
+    <script>
+        document.getElementById('donation-method').addEventListener('change', function() {
+            var paymentDetails = document.querySelectorAll('.payment-details');
+            paymentDetails.forEach(function(detail) {
+                detail.style.display = 'none';
+            });
+
+            var selectedMethod = this.value;
+            document.getElementById(selectedMethod + '-details').style.display = 'block';
+        });
+    </script>
+    <!-- Donation Form End -->
+</section>
+<script>
+    // Function to toggle between payment method details
+    function togglePaymentDetails() {
+        var donationMethod = document.getElementById("donation-method").value;
+        
+        // Hide all payment details sections
+        document.getElementById("mpesa-details").style.display = "none";
+        document.getElementById("credit-card-details").style.display = "none";
+        document.getElementById("paypal-details").style.display = "none";
+        document.getElementById("bank-transfer-details").style.display = "none";
+        
+        // Show the selected payment details
+        if (donationMethod === "mpesa") {
+            document.getElementById("mpesa-details").style.display = "block";
+        } else if (donationMethod === "credit-card") {
+            document.getElementById("credit-card-details").style.display = "block";
+        } else if (donationMethod === "paypal") {
+            document.getElementById("paypal-details").style.display = "block";
+        } else if (donationMethod === "bank-transfer") {
+            document.getElementById("bank-transfer-details").style.display = "block";
+        }
+    }
+
+    // Show confirmation message after successful form submission (for demonstration purposes)
+    document.getElementById("donation-form").onsubmit = function(event) {
+        event.preventDefault(); // Prevent actual form submission
+        document.getElementById("confirmation-message").style.display = "block";
+        // You can add more logic here to handle backend submission of the form
+    };
+</script>
+
+<script>
+    document.getElementById('donation-method').addEventListener('change', function() {
+        var paymentDetails = document.querySelectorAll('.payment-details');
+        paymentDetails.forEach(function(detail) {
+            detail.style.display = 'none';
+        });
+
+        var selectedMethod = this.value;
+        document.getElementById(selectedMethod + '-details').style.display = 'block';
+    });
+</script>
+<footer>
+    <div class="footer-wrapper section-bg2" data-background="/static/assets/img/gallery/footer_bg.png">
+        <!-- Footer Top -->
+        <div class="footer-area footer-padding">
+            <div class="container">
+                <div class="row d-flex justify-content-between">
+                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                        <div class="single-footer-caption mb-50">
+                            <div class="single-footer-caption mb-30">
+                                <div class="footer-tittle">
+                                    <div class="footer-logo mb-20">
+                                        <a href="index.html"><img src="/static/assets/img/logo/logo2_footer.png" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
+                        <div class="single-footer-caption mb-50">
+                            <div class="footer-tittle">
+                                <h4>Contact Info</h4>
+                                    <ul>
+                                        <li>
+                                            <p>Address: P.O. Box 6344-40100.</p>
+                                        </li>
+                                        <li><p>Kisumu, Kenya</p>
+                                        </li>
+                                        <li><a href="#">Phone: +254723896489/+254716377695
+
+                                        </a></li>
+                                        <li><a href="#">Email: info@holisticimpactinitiative.africa</a></li>
+                                    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
+                        <div class="single-footer-caption mb-50">
+                            <div class="footer-tittle">
+                                <h4>Newsletter</h4>
+                                <div class="footer-pera footer-pera2">
+                                    <p>Subscribe To Our Newsletter.</p>
+                                </div>
+                                <!-- Form -->
+                                <div class="footer-form">
+                                    <div id="mc_embed_signup">
+                                        <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+                                            method="get" class="subscribe_form relative mail_part">
+                                            <input type="email" name="email" id="newsletter-form-email" placeholder="Email Address"
+                                                class="placeholder hide-on-focus" onfocus="this.placeholder = ''"
+                                                onblur="this.placeholder = 'Email Address'">
+                                            <div class="form-icon">
+                                                <button type="submit" name="submit" id="newsletter-submit"
+                                                    class="email_icon newsletter-submit button-contactForm">
+                                                    <img src="/static/assets/img/gallery/form.png" alt="">
+                                                </button>
+                                            </div>
+                                            <div class="mt-10 info"></div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer Bottom -->
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="footer-border">
+                    <div class="row d-flex justify-content-between align-items-center">
+                        <div class="col-xl-10 col-lg-9">
+                            <div class="footer-copy-right">
+                                <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved.</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-3">
+                            <div class="footer-social f-right">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="https://www.facebook.com/sai4ull"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fas fa-globe"></i></a>
+                                <a href="#"><i class="fab fa-behance"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Scroll Up -->
+<div id="back-top">
+    <a title="Go to Top" href="#"><i class="fas fa-level-up-alt"></i></a>
+</div>
+
+<!-- Scripts -->
+<script src="/static/assets/js/vendor/modernizr-3.5.0.min.js"></script>
+<script src="/static/assets/js/vendor/jquery-1.12.4.min.js"></script>
+<script src="/static/assets/js/popper.min.js"></script>
+<script src="/static/assets/js/bootstrap.min.js"></script>
+<script src="/static/assets/js/jquery.slicknav.min.js"></script>
+<script src="/static/assets/js/owl.carousel.min.js"></script>
+<script src="/static/assets/js/slick.min.js"></script>
+<script src="/static/assets/js/wow.min.js"></script>
+<script src="/static/assets/js/animated.headline.js"></script>
+<script src="/static/assets/js/jquery.magnific-popup.js"></script>
+<script src="/static/assets/js/gijgo.min.js"></script>
+<script src="/static/assets/js/jquery.nice-select.min.js"></script>
+<script src="/static/assets/js/jquery.sticky.js"></script>
+<script src="/static/assets/js/jquery.barfiller.js"></script>
+<script src="/static/assets/js/jquery.counterup.min.js"></script>
+<script src="/static/assets/js/waypoints.min.js"></script>
+<script src="/static/assets/js/jquery.countdown.min.js"></script>
+<script src="/static/assets/js/hover-direction-snake.min.js"></script>
+<script src="/static/assets/js/contact.js"></script>
+<script src="/static/assets/js/jquery.form.js"></script>
+<script src="/static/assets/js/jquery.validate.min.js"></script>
+<script src="/static/assets/js/mail-script.js"></script>
+<script src="/static/assets/js/jquery.ajaxchimp.min.js"></script>
+<script src="/static/assets/js/plugins.js"></script>
+<script src="/static/assets/js/main.js"></script>
+
+
+<!-- Chatbot -->
+<div class="chatbot-container" style="display: block; position: fixed; bottom: 20px; right: 20px; z-index: 1000; background-color: white; border: 1px solid #ddd; border-radius: 8px; width: 300px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+<div class="chat-header" style="background-color: #007bff; color: white; padding: 10px; border-top-left-radius: 8px; border-top-right-radius: 8px;">
+    <h4 style="margin: 0; font-size: 16px;">Chat with Us!</h4>
+    <button class="close-chat" onclick="toggleChat()" style="background: none; border: none; color: white; font-size: 20px; float: right;">×</button>
+</div>
+<div class="chat-body" style="max-height: 300px; overflow-y: auto; padding: 10px; display: none;">
+    <div id="chat-content" style="font-size: 14px; line-height: 1.5;"></div>
+</div>
+<div class="chat-input" style="display: none; border-top: 1px solid #ddd; padding: 10px;">
+    <input type="text" id="user-input" placeholder="Type your message..." style="width: calc(100% - 50px); padding: 5px; border: 1px solid #ddd; border-radius: 4px;" onkeypress="sendMessage(event)">
+    <button onclick="sendChat()" style="background-color: #007bff; color: white; border: none; padding: 5px 10px; border-radius: 4px;">Send</button>
+</div>
+<button class="chat-toggle" onclick="toggleChat()" style="position: absolute; bottom: -50px; right: 0; background-color: #007bff; color: white; border: none; border-radius: 50%; width: 50px; height: 50px; font-size: 20px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">💬</button>
+</div>
+<script>
+    const chatbotResponses = {
+        hello: "Hi there! How can I assist you today?",
+        volunteer: "That's amazing! You can volunteer by filling out the form on our site.",
+        donation: "Thank you for your interest in donating! Visit our Donate page for more details.",
+        default: "I'm here to help! Please ask your question.",
+    };
+    function toggleChat() {
+        const chatbotBody = document.querySelector('.chat-body');
+        const chatbotInput = document.querySelector('.chat-input');
+        const isVisible = chatbotBody.style.display === 'block';
+    
+        if (isVisible) {
+            chatbotBody.style.display = 'none';
+            chatbotInput.style.display = 'none';
+        } else {
+            chatbotBody.style.display = 'block';
+            chatbotInput.style.display = 'block';
+        }
+    }
+    
+        
+    function sendChat() {
+        const userInput = document.getElementById('user-input');
+        const chatContent = document.getElementById('chat-content');
+
+        if (userInput.value.trim() !== "") {
+            chatContent.innerHTML += `<div><strong>You:</strong> ${userInput.value}</div>`;
+            const userMessage = userInput.value.toLowerCase();
+            const botReply = chatbotResponses[userMessage] || chatbotResponses.default;
+            chatContent.innerHTML += `<div><strong>Bot:</strong> ${botReply}</div>`;
+            chatContent.scrollTop = chatContent.scrollHeight;
+            userInput.value = "";
+        }
+    }
+
+    function sendMessage(event) {
+        if (event.key === "Enter") {
+            sendChat();
+        }
+    }
+</script>
+
+</body>
+</html>    
+<!-- Closing the body and HTML tags -->
+</body>
+</html>

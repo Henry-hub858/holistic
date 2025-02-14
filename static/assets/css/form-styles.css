@@ -1,0 +1,98 @@
+/* form-style.css */
+.contact-section {
+    background-color: #e0e0e0; /* Slightly darker background to add more contrast */
+    padding: 60px 0;
+}
+
+.contact-title {
+    font-size: 36px;
+    font-weight: 700; /* Bold title */
+    color: #2e6f56; /* Dark green for a professional look */
+    text-align: center;
+    margin-bottom: 40px;
+    border-bottom: 4px solid #2e6f56; /* Underline to emphasize title */
+}
+
+.form-contact {
+    background-color: #fff; /* White background for form container */
+    padding: 40px;
+    border-radius: 10px; /* Rounded corners for a more modern look */
+    border: 2px solid #2e6f56; /* Strong green border around the form */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* More prominent shadow */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    border: 2px solid #ddd; /* Thicker border for inputs */
+    border-radius: 8px; /* Rounded corners for modern look */
+    padding: 15px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    width: 100%;
+    background-color: #fff; /* White background for inputs */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+.form-control:focus {
+    border-color: #2e6f56; /* Highlight border on focus */
+    outline: none;
+    box-shadow: 0 2px 8px rgba(46, 111, 86, 0.3); /* More pronounced focus shadow */
+}
+
+textarea.form-control {
+    resize: vertical;
+}
+
+button.button-contactForm {
+    background-color: #2e6f56; /* Dark green button */
+    color: #fff;
+    font-weight: 700; /* Bold button text */
+    padding: 15px 30px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 18px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect on button */
+}
+
+button.button-contactForm:hover {
+    background-color: #255f47; /* Darker green on hover */
+    transform: translateY(-2px); /* Slight upward movement on hover */
+}
+
+button.button-contactForm:focus {
+    outline: none;
+    box-shadow: 0 0 8px rgba(46, 111, 86, 0.2); /* Focus effect */
+}
+
+.select option {
+    font-weight: 500;
+}
+
+/* Input fields focus state and placeholder styles */
+.form-control::placeholder {
+    color: #aaa; /* Lighter placeholder text */
+}
+
+.form-group select {
+    border-color: #ddd; /* Lighter border for select dropdown */
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .contact-title {
+        font-size: 30px; /* Smaller title on smaller screens */
+    }
+
+    .col-sm-6, .col-12 {
+        margin-bottom: 15px;
+    }
+
+    .form-contact {
+        padding: 20px; /* Smaller padding on mobile */
+    }
+}

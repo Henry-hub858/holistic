@@ -3244,7 +3244,7 @@ hr {
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
   /* line 125, C:/Users/HP/Desktop/jun-2020/277.Charity _Non-profit/assets/scss/_headerMenu.scss */
   .header-area .header-bottom {
-    padding: 0px 30px;
+    padding: 0px 30px
   }
 }
 
@@ -7407,6 +7407,57 @@ del {
 .progress-table .percentage {
   width: 40.36%;
   padding-right: 50px;
+}
+/* Ensure the header bottom aligns properly */
+.header-bottom .row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+/* Logo adjustment */
+.logo img {
+  max-width: 200px;
+  height: auto;
+}
+
+/* Navbar spacing */
+.menu-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-grow: 1;
+}
+
+/* Ensure menu items do not overlap */
+.main-menu nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Adds spacing between nav items */
+  flex-wrap: nowrap;
+} 
+
+/* Adjust Donate button spacing */
+.header-right-btn {
+  margin-left: 10px;
+
+}
+
+/* Prevent menu overflow on large screens */
+.menu-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  max-width: 100%;
+}
+
+/* Hide mobile menu on larger screens */
+@media (min-width: 1024px) {
+  .slicknav_menu {
+      display: none !important;
+  }
 }
 
 /* line 343, C:/Users/HP/Desktop/jun-2020/277.Charity _Non-profit/assets/scss/_elements.scss */

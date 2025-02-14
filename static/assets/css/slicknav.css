@@ -155,7 +155,15 @@
 .slicknav_menu {
     background: transparent;
     margin-top: 10px;
-}
+  
+      margin-right: 20px; /* Adjust as needed */
+  }
+  
+  .slicknav_brand {
+      margin-left: 20px; /* Space between logo and nav */
+  }
+  
+
 .slicknav_menu .slicknav_icon-bar {
     background-color: #ffffff;
     height: 3px;

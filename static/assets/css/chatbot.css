@@ -1,0 +1,54 @@
+/* Chatbot container is always visible, only inner contents are toggled */
+.chatbot-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 350px;
+    background-color: #fff;
+    border: 2px solid #007bff;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    font-family: 'Roboto', sans-serif;
+    display: block; /* Keep the container always visible */
+}
+
+.chat-header {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.chat-body {
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 10px;
+    display: none;  /* Hide the chat body initially */
+}
+
+.chat-input {
+    display: none;  /* Hide the input field initially */
+    border-top: 1px solid #ddd;
+    padding: 10px;
+}
+
+/* Styles for the chat toggle button */
+.chat-toggle {
+    position: absolute;
+    bottom: -50px;
+    right: 0;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
